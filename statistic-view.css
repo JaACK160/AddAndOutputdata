@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#sidebarPopUp li a#statisticView{
+    border: solid rgb(85, 85, 85) 2px;
+    background-color: rgb(85, 85, 85);
+    color: wheat;
+    transition: 0.5s;
+}
+
+
+.container{
+    margin: 0% 0 0 26%;
+    display: flex;
+    gap: 150px;
+}
+.chart{
+    margin: 15% 0 0 0;
+    border: 1px solid #f49131;
+    border-radius: 1rem;
+    background: #251c35;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+}

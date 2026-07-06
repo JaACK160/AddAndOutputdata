@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="list-view.css">
+</head>
+<body>
+
+
+            <input type="checkbox" id="input">
+        <label for="input" class="toggle">
+            <span class="top-line common"></span>
+            <span class="middle-line common"></span>
+            <span class="bottom-line common"></span>
+        </label>
+    <div id="sidebar-konumu"></div>
+
+
+<table>
+    <thead>
+        <tr>
+            <th class="durum-th"></th>
+            <th>Tarih</th>
+            <th>Kategori</th>
+            <th>Açıklama</th>
+            <th>Fiyat</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+        
+
+    </tbody>
+</table>
+
+
+<div id="calculation">
+    <span id="snowSpan"></span>
+    <span id="damageSpan"></span>
+    <span id="netTotalSpan"></span>
+</div>
+
+
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data=> {
+                document.getElementById('sidebar-konumu').innerHTML = data;
+            })
+    </script>
+
+    <script src="list-view.js"></script>
+</body>
+</html>

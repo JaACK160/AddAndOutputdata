@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="data-add-output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <section id="dataSection">
+        
+        <input type="checkbox" id="input">
+        <label for="input" class="toggle">
+            <span class="top-line common"></span>
+            <span class="middle-line common"></span>
+            <span class="bottom-line common"></span>
+        </label>
+        <div id="sidebar-konumu"></div>
+
+
+    <div id="addDataDiv">
+        <header><a href="javascript:void=(0);" id="dataAdd" class="dataAddHeader" onclick="addDataForm()">Gelir Ekle</a></header>
+        <ul id="dataAddUl" class="ula">
+            <li id="dataAddDateLi"><label for="" id="dataAddDateWriting" >*Tarih: </label><input type="date" id="dataAddDate"></li>
+
+            <li id="dataAddCategoryLi">
+                <label for="" id="dataAddCategoryWriting">*Kategori: </label>
+                <select name="category" id="dataAddCategorySelect">
+                <option value="" class="dataAddCategory">Lütfen birini seçin</option>
+                <option value="Maaş" class="dataAddCategory">Maaş</option>
+                <option value="Maaş Avansı" class="dataAddCategory">Maaş Avansı</option>
+                <option value="Satış" class="dataAddCategory">Satış</option>
+                <option value="Ek İş" class="dataAddCategory">Ek İş</option>
+            </select></li>
+            
+            <li id="dataAddExplanationLi"><label for="" id="dataAddExplanationWriting">Açıklama: </label><textarea maxlength="60" name="" id="dataAddExplanation"></textarea><button id="micBtnData"><i class="fa-solid fa-microphone" id="micData"></i></button></li>
+            <li id="dataAddPriceLi"><label for="" id="dataAddPriceWriting">*Fiyat: </label><input type="text" id="dataAddPrice" inputmode="decimal" oninput="this.value = this.value.replace(/[^0-9.]/g,'')"><span id="dataAddPriceSpan">₺</span></li>
+            <button type="button" id="dataAddButtonAdd" onclick="dataSaveAdd(event)">EKLE</button>
+        </ul>
+
+        <header><a href="javascript:void=(0);" id="expenseData" class="expenseDataHeader active" onclick="expenseDataForm()">Gider Ekle</a></header>
+        <ul id="expenseDataUl" class="ulu">
+            <li id="expenseDataDateLi" ><label for="" id="expenseDataDateWriting">*Tarih: </label><input type="date" id="expenseDataDate"></li>
+
+            <li id="expenseDataCategoryLi">
+                <label for="" id="expenseDataCategoryWriting">*Kategori: </label>
+                <select name="category" id="expenseDataCategorySelect">
+                <option value="" class="expenseDataCategory">Lütfen birini seçin</option>
+                <option value="Ev ve Yaşam" class="expenseDataCategory">Ev ve Yaşam</option>
+                <option value="Gıda ve Market" class="expenseDataCategory">Gıda ve Market</option>
+                <option value="Ulaşım ve Seyahat" class="expenseDataCategory">Ulaşım ve Seyahat</option>
+                <option value="Giyim ve Kozmetik" class="expenseDataCategory">Giyim ve Kozmetik</option>
+                <option value="Sağlık ve Eğitim" class="expenseDataCategory">Sağlık ve Eğitim</option>
+                <option value="Eğlence ve Sosyal Yaşam" class="expenseDataCategory">Eğlence ve Sosyal Yaşam</option>
+                <option value="Finans ve Diğer" class="expenseDataCategory">Finans ve Diğer</option>
+            </select></li>
+            
+            <li id="expenseDataExplanationLi"><label for="" id="expenseDataExplanationWriting">Açıklama: </label><textarea name="" id="expenseDataExplanation" rows="5" cols="30"></textarea><button id="micBtnExpense"><i class="fa-solid fa-microphone" id="micExpense"></i></button></li>
+            <li id="expenseDataPriceLi"><label for="" id="expenseDataPriceWriting">*Fiyat: </label><input type="text" id="expenseDataPrice" inputmode="decimal" oninput="this.value = this.value.replace(/[^0-9.]/g,'')"><span id="expenseDataPriceSpan">₺</span></li>
+           <button type="button" id="expenseDataButtonAdd" onclick="dataSaveExpense(event)">EKLE</button>
+        </ul>
+
+    </div>
+
+
+    </section>
+
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data=> {
+                document.getElementById('sidebar-konumu').innerHTML = data;
+            })
+    </script>
+    
+    <script src="data-add-output.js" ></script>
+</body>
+</html>

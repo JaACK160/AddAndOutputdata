@@ -1,0 +1,606 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+#dataSection{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+#addDataDiv .ula{
+    display: none;
+}
+
+/* Sidebar */
+
+#sidebarPopUp li a#addOutPut{
+    border: solid rgb(85, 85, 85) 2px;
+    background-color: rgb(85, 85, 85);
+    color: wheat;
+    transition: 0.5s;
+}
+
+/*/////////////////////////////////////////////////////  Data Add  /////////////////////////////////////////////////////////*/
+
+#addDataDiv{
+    border-radius: 70px;
+    margin: 50px 0 0 470px;
+    width: 900px;
+    height: 600px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 20px red;
+}
+
+#dataAdd{
+    border-radius: 20px;
+    display: block;
+    margin: 3% 0 4% 14%;
+    padding: 14px;
+    width: 185px;
+    font-size: 230%;
+   background-color: #10B981;
+    border: solid #10B981 3px;
+    color: #FFFFFF;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+
+}
+#dataAdd.active,
+#dataAdd:hover{
+    border: solid red 3px;
+    background-color: slateblue;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+#dataAddUl{
+    padding: 17% 0 0 30%;
+    display: flex; 
+    flex-direction: column;
+    position: absolute;
+}
+#dataAddDateLi{
+    align-items: left;
+    width: 240px;
+    margin-bottom: 20px;
+}
+#dataAddDateWriting{
+    color: green;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dataAddDate{
+    font-size: large;
+    width: 130px;
+    height: 40px;
+}
+#dataAddCategoryLi{
+    width: 360px;
+    margin-bottom: 20px;
+}
+#dataAddCategoryWriting{
+    color: green;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dataAddCategorySelect {
+    font-size: large;
+   width: 200px;
+    height: 40px;
+}
+#dataAddExplanationLi{
+    width: 345px;
+    margin-bottom: 20px;
+}
+#dataAddExplanationWriting{
+    color: green;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}#dataAddExplanation{
+    resize: none;
+    font-size: larger;
+   width: 290px;
+    height: 50px;
+}
+#dataAddPriceLi{
+    width: 230px;
+    margin-bottom: 20px;
+}
+#dataAddPriceWriting{
+    color: green;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dataAddPrice{
+    font-size: larger;
+   width: 100px;
+   height: 30px;
+}
+#dataAddPriceSpan{
+    margin: 20px 0 0 5px;
+    font-size: x-large;
+    color:green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#dataAddButtonAdd{
+    font-size: large;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    border: solid black 3px;
+}
+#dataAddButtonAdd:hover{
+    color: aliceblue;
+    cursor: pointer;
+    background-color: green;
+    border: solid green 3px;
+    transition: 0.2s;
+}
+/*//////////////////////////////////////////////////////  Data Expension  /////////////////////////////////////////////////*/
+
+
+#expenseData{
+    border-radius: 20px;
+    display: block;
+    margin: 3% 0 0% 59%;
+    padding: 14px;
+    width: 195px;
+    font-size: 230%;
+    background-color: #10B981;
+    border: solid #10B981 3px;
+    color: #FFFFFF;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+}
+#expenseData.active,
+#expenseData:hover{
+    border: solid red 3px;
+    background-color: slateblue;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+#expenseDataUl{
+    margin: 17% 0 0 30%;
+    display: flex; 
+    flex-direction: column;
+    position: absolute;
+}
+#expenseDataDateLi{
+    align-items: left;
+    width: 240px;
+    margin-bottom: 20px;
+}
+#expenseDataDateWriting{
+    color: red;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#expenseDataDate{
+    font-size: large;
+    width: 130px;
+    height: 40px;
+}
+#expenseDataCategoryLi{
+    width: 360px;
+    margin-bottom: 20px;
+}
+#expenseDataCategoryWriting{
+    color: red;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#expenseDataCategorySelect {
+    font-size: large;
+   width: 200px;
+    height: 40px;
+}
+#expenseDataExplanationLi{
+    width: 345px;
+    margin-bottom: 20px;
+}
+#expenseDataExplanationWriting{
+    color: red;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}#expenseDataExplanation{
+    resize: none;
+    font-size: larger;
+   width: 290px;
+    height: 50px;
+}
+#expenseDataPriceLi{
+    width: 230px;
+    margin-bottom: 20px;
+}
+#expenseDataPriceWriting{
+    color: red;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#expenseDataPrice{
+    font-size: larger;
+    width: 100px;
+    height: 30px;
+}
+#expenseDataPriceSpan{
+    margin: 20px 0 0 5px;
+    font-size: x-large;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#expenseDataButtonAdd{
+    font-size: large;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    border: solid black 3px;
+}
+#expenseDataButtonAdd:hover{
+    color: aliceblue;
+    cursor: pointer;
+    background-color: green;
+    border: solid green 3px;
+    transition: 0.2s;
+}
+
+
+/*///////////////////////////////////////  Microphone Data    ////////////////////////////////*/
+#micBtnData{
+    background: none;
+    border:none ;
+    align-items: center;
+    justify-content: center;
+    color:limegreen;
+}
+#micData{
+    padding: 4px 2px 5px 2px;
+    border: solid 2px green;
+    border-radius: 5px;
+    transform: translateY(-40%);
+    margin: 0 0 0 8px;
+    cursor: pointer;
+    font-size: 29px;
+}
+
+/*///////////////////////////////////////  Microphone Expense    ///////////////////////////////*/
+
+#micBtnExpense{
+    background: none;
+    border:none ;
+    align-items: center;
+    justify-content: center;
+    color: rebeccapurple;
+}
+#micExpense{
+    padding: 4px 2px 5px 2px;
+    border: solid 2px red;
+    border-radius: 5px;
+    transform: translateY(-40%);
+    margin: 0 0 0 8px;
+    cursor: pointer;
+    font-size: 29px;
+}
+
+/*///////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 480px){
+
+    body{
+        background-color: white;
+    }
+
+
+
+    .toggle{
+        transform: translate(50%, 50%);
+        position: absolute;
+        height: 45px;
+        width: 45px;
+        backdrop-filter: blur(30px);
+        cursor: pointer;
+        z-index: 3;
+        border-radius: 5px;
+        background-color:white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+.toggle .common{
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50px;
+    transition: 0.9s ease;
+
+}
+.toggle .top-line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.toggle .middle-line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.toggle .bottom-line{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#input{
+    opacity: 0;
+    transform: translate(220%, 220%);
+    position: absolute;
+    z-index: 4;
+}
+#input:checked ~ .toggle .top-line{
+    left: 6px;
+    top: 20px;
+    width: 35px;
+    transform: rotate(45deg);
+    transition: 0.5s ease;
+}
+#input:checked ~ .toggle .middle-line{
+    opacity: 0;
+    transform: translateX(30px);
+    transition: 0.5s ease;
+}
+#input:checked ~ .toggle .bottom-line{
+    left: 6px;
+    top: 20px;
+    width: 35px;
+    transform: rotate(-45deg);
+    transition: 0.5s ease;
+}
+#input:checked ~ #sidebar-konumu{
+    transition: 0.8s ease;
+        left: 0 !important;
+}
+
+    #sidebar-konumu{
+    transition: 0.6s ease;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100vh;
+    z-index: 1;
+    }
+
+    
+    /*/////////////////////////////////////////////////////  Data Add  /////////////////////////////////////////////////////////*/
+
+#addDataDiv{
+    border-radius: 10px;
+    transform: translateY(18%);
+    width: 360px;
+    height: 500px;
+    background: none;
+}
+
+#dataAdd{
+    border-radius: 7px;
+    display: block;
+    margin: 3% 0 4% 7%;
+    padding: 5px;
+    width: 100px;
+    font-size: 100%;
+    background-color: #10B981;
+    border: solid #10B981 3px;
+    color: #FFFFFF;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+}
+#dataAddUl{
+    transform: translate(10%, 7%);
+    padding: 20% 0 0 6%;
+    display: flex; 
+    flex-direction: column;
+    position: absolute;
+}
+#dataAddDateLi{
+    align-items: left;
+    width: 230px;
+    margin-bottom: 10px;
+}
+#dataAddDateWriting{
+    color: green;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dataAddDate{
+    font-size: large;
+    width: 60%;
+    height: 40px;
+}
+#dataAddCategoryLi{
+    width: 290px;
+    margin-bottom: 20px;
+}
+#dataAddCategoryWriting{
+    color: green;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dataAddCategorySelect {
+    font-size: large;
+    width: 60%;
+    height: 40px;
+}
+#dataAddExplanationLi{
+    width: 310px;
+    margin-bottom: 20px;
+}
+#dataAddExplanationWriting{
+    color: green;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dataAddExplanation{
+    resize: none;
+    font-size: larger;
+   width: 75%;
+    height: 70px;
+}
+#dataAddPriceLi{
+    width: 230px;
+    margin-bottom: 20px;
+}
+#dataAddPriceWriting{
+    color: green;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dataAddPrice{
+    font-size: larger;
+   width: 50%;
+   height: 30px;
+}
+#dataAddPriceSpan{
+    margin: 20px 0 0 5px;
+    font-size: x-large;
+    color:green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*//////////////////////////////////////////////////////  Data Expension  /////////////////////////////////////////////////*/
+
+
+#expenseData{
+    border-radius: 7px;
+    display: block;
+    margin: 3% 0 4% 50%;
+    padding: 5px;
+    width: 100px;
+    font-size: 100%;
+   background-color: #10B981;
+    border: solid #10B981 3px;
+    color: #FFFFFF;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+}
+
+#addDataDiv{
+    border-radius: 10px;
+    margin: 50px 0 0 10px;
+    width: 360px;
+    height: 500px;
+    background: none;
+    border: solid 1px red;
+    box-shadow: 0px 0px 20px red;
+}
+
+#expenseDataUl{
+    padding: 10% 0 0 0%;
+    transform: translateX(-17.5%);
+    display: flex; 
+    flex-direction: column;
+    position: absolute;
+}
+#expenseDataDateLi{
+    align-items: left;
+    width: 230px;
+    margin-bottom: 10px;
+}
+#expenseDataDateWriting{
+    color: red;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#expenseDataDate{
+    font-size: large;
+    width: 60%;
+    height: 40px;
+}
+#expenseDataCategoryLi{
+    width: 290px;
+    margin-bottom: 20px;
+}
+#expenseDataCategoryWriting{
+    color: red;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#expenseDataCategorySelect {
+    font-size: large;
+   width: 60%;
+    height: 40px;
+}
+#expenseDataExplanationLi{
+    width: 310px;
+    margin-bottom: 20px;
+}
+#expenseDataExplanationWriting{
+    color: red;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#expenseDataExplanation{
+    resize: none;
+    font-size: larger;
+   width: 75%;
+    height: 70px;
+}
+#expenseDataPriceLi{
+    width: 230px;
+    margin-bottom: 20px;
+}
+#expenseDataPriceWriting{
+    color: red;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#expenseDataPrice{
+    font-size: larger;
+   width: 50%;
+   height: 30px;
+}
+#expenseDataPriceSpan{
+    margin: 20px 0 0 5px;
+    font-size: x-large;
+    color:red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#micBtnData{
+    background: none;
+    border:none ;
+    align-items: center;
+    justify-content: center;
+    color:limegreen;
+}
+#micData{
+    padding: 4px 2px 5px 2px;
+    border: solid 2px green;
+    border-radius: 5px;
+    transform: translateY(-40%);
+    margin: 0 0 0 8px;
+    cursor: pointer;
+    font-size: 29px;
+}
+
+/*///////////////////////////////////////  Microphone Expense    ///////////////////////////////*/
+
+#micBtnExpense{
+    background: none;
+    border:none ;
+    align-items: center;
+    justify-content: center;
+    color: rebeccapurple;
+}
+#micExpense{
+    padding: 4px 2px 5px 2px;
+    border: solid 2px red;
+    border-radius: 5px;
+    transform: translateY(-40%);
+    margin: 0 0 0 8px;
+    cursor: pointer;
+    font-size: 29px;
+}
+
+}
